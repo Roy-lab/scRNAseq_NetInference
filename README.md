@@ -10,6 +10,4 @@ Summary of data directory structure
       Imputed expression matrix using MAGIC after depth normalization and 
       gene/cell filtering for each of the seven datasets.
   - `benchmark/`  
-      The han_GSE107552 dataset includes an extra directory containing 
-      subsamples of the normalized matrix after depth normalization and 
-      gene/cell filtering used in runtime benchmarking.
+      The directory containing subsamples from han_GSE107552 normalized matrix used in runtime benchmarking.
