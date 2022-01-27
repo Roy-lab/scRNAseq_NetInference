@@ -1,4 +1,3 @@
-# scRNAseq_NetInference
 ## Scripts structure
 ### Network inference 
 - `scripts/wrapper_network_inference/` 
