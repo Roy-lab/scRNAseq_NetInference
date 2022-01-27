@@ -1,17 +1,17 @@
 # scRNAseq_NetInference
 ## Scripts structure
 ### Network inference 
-- `wrappers/network_inference/` 
+- `scripts/wrapper_network_inference/` 
 The wrapper shell scripts that can be used to run the algorithms on pre-processed dataset, and provide format corrected networks as output
 - `scripts/run_algorithms/`
 The python or R scripts to run specific algorithms. These scripts are called from the shell scripts in `wrappers/`
-- `scripts/format_correction/`
+- `scripts/format_output/`
 Scripts to align the output format of each algorithms. These scripts are called from the shell scripts in `wrappers/`
 
 ### Metrics computing
-- `wrappers/metrics/`
+- `scripts/wrapper_metrics/`
 The wrapper script to generate scores for each metric, input is formated networks and output is score dataframes in text files.
-- `scripts/metrics/`
+- `scripts/computing_metrics/`
 The scripts to compute metrics 
 
 
