@@ -1,4 +1,4 @@
-## Scripts structure
+## Welcome to the scRNA-seq Gene Regulatory Network Benchmarking project
 ### Network inference 
 - `scripts/wrapper_network_inference/` 
 The wrapper shell scripts that can be used to run the algorithms on pre-processed dataset, and provide format corrected networks as output
