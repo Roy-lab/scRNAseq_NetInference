@@ -2,11 +2,11 @@
 ![alt text](https://pages.discovery.wisc.edu/~smccalla/scIN/overview.png)
 # Overview
 We benchmarked 11 different network inference algorithms on 7 scRNA-seq datasets from three species, yeast, human and mouse. Here we describe the workflow for running the algorithms through one of our datasets, Gasch. All datasets and gold standards are available [here].(https://doi.org/10.5281/zenodo.5907528)
-# Data pre-processing
+## Data pre-processing
 
-# Obtaining pseudo time
+## Obtaining pseudo time
 
-# Running algorithms 
+## Running algorithms 
 
 ### PIDC
 
@@ -15,11 +15,11 @@ We benchmarked 11 different network inference algorithms on 7 scRNA-seq datasets
 ### MERLIN
 
 
-# Obtaining consensus networks
+## Obtaining consensus networks
 
 
-# Computing F-score 
+## Computing F-score 
 
-# Computing AUPR
+## Computing AUPR
 
-# Obtaining predictable TF and targets
+## Obtaining predictable TF and targets
