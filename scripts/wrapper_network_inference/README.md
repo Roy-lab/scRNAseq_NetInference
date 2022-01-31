@@ -8,11 +8,42 @@ Checklist
 * [ ] kNN-DREMI
 * [ ] SILGGM
 * [X] Inferelator
-  
 * [ ] LEAP
 * [ ] SCODE
 
 # Usage
+## Pearson
+*Sample Usage*:
+```shell
+sh ./pearson.sh \
+../../data/gasch_GSE102475/normalized/gasch_GSE102475_depthnorm_seqdepthfilter_t.txt \
+gasch_GSE102475 \
+gasch_GSE102475_pearson_results \
+gasch_GSE102475_pearson_log.txt
+```
+*Inputs*: 
+1. counts
+     This count matrix (or expression matrix) should be GENE by CELL, with row names and column names
+     The file should be .csv files
+2. dataset
+     Specify the dataset you are using [TODO: choices], ex.gasch_GSE102475
+3. output folder 
+     The folder to hold all raw results and final results, without slash at the end!
+4. log file
+
+*Outputs*: 
+{$dataset}_formated_network.txt.gz
+    Compressed network file
+    The network is formated for the downstream analysis:
+    with 3 columns in a dataframe [regulator, target, score]
+    
+*Notes*:
+We did stability selection for pearson correlation method, 
+
+
+
+
+
 ## Inferelator
 *Sample Usage*:
 ```shell
@@ -43,3 +74,7 @@ network file
 The network is formated for the downstream analysis:
 with 3 columns in a dataframe [regulator, target, score]
 The .tsv file of network will in at $dirname/final/network.tsv
+
+*Notes*:
+
+We only have single run for inferelator (without stability selection) due to computing resource limit.
