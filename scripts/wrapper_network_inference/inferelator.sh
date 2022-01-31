@@ -27,7 +27,7 @@ set -euo pipefail
     # network file
     # The network is formated for the downstream analysis:
     # with 3 columns in a dataframe [regulator, target, score]
-
+    # The .tsv file of network will in at $dirname/final/network.tsv
 expression=$1
 TFs=$2
 gene_metadata=$3
