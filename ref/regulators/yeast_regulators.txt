@@ -1,0 +1,1 @@
+/mnt/dv/wid/projects2/Roy-common/data/data_new/yeast/networks/tfnets/Scer_tf_mrna_binding_speciesspecific.txt
