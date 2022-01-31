@@ -8,7 +8,7 @@ Checklist
 * [ ] kNN-DREMI
 * [ ] SILGGM
 * [X] Inferelator
-* [ ] LEAP
+* [X] LEAP
 * [ ] SCODE
 
 # Usage
@@ -78,3 +78,26 @@ The .tsv file of network will in at $dirname/final/network.tsv
 *Notes*:
 
 We only have single run for inferelator (without stability selection) due to computing resource limit.
+
+
+## LEAP
+*Sample Usage*:
+```shell
+sh LEAP.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../data/gasch_GSE102475/ordered_pdata.csv \
+gasch_GSE102475_LEAP \
+./test/
+```
+
+*Inputs*:
+1. counts
+    counts matrix: subset.$(idx).csv.gz
+2. pseudotime:
+    ordered_pdata.csv
+3. fname 
+    could be the dataset name
+*Outputs*:
+
+*Notes*:
+We did stability selection for LEAP 
