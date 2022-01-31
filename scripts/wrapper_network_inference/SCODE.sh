@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# pearson.sh
+# SCODE.sh
 #
-# Wrapper to run pearson and clean output format
+# Wrapper to run SCODE and clean output format
 #
 # Copyright (C) 2019 Matthew Stone <mrstone3@wisc.edu> and Jiaxin Li <jli2274@wisc.edu>
 # Distributed under terms of the MIT license.
@@ -45,7 +45,7 @@ fi
 echo "Infer pearson correlation networks"
 echo "WRITING TO OUTPUT FILE $folderout"
 
-python3 ./run_algorithms/Pearson/run_pearson.py $counts $folderout/raw.txt.gz 2> $log
+python3 ./run_algorithms/run_SCODE.py $counts $folderout/raw.txt.gz 2> $log
 
 echo "Starting Format correction"
 
