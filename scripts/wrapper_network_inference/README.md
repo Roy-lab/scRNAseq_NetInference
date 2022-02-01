@@ -2,7 +2,7 @@
 Checklist
 * [X] Pearson
 * [X] SCENIC
-* [ ] PIDC
+* [X] PIDC
 * [ ] MERLIN
 * [X] Scribe
 * [ ] kNN-DREMI
@@ -134,4 +134,29 @@ Inputs:
 
 *Notes*:
 
-We did stability selection for LEAP 
+1. We did stability selection for Scribe
+2. To enable Scribe to run on large sets of regulators, we split the regulator list into smaller sets
+
+
+## PIDC
+*Sample Usage*:
+```shell
+sh ./PIDC.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+gasch_GSE102475_PIDC \
+gasch_GSE102475_pearson_log.txt
+```
+*Inputs*: 
+1. counts:
+    expression matrix
+2. fname:
+    output file name
+3. log:
+    log file name
+
+*Outputs*: 
+A csv file for network
+
+*Notes*:
+We did stability selection for PIDC method.
+
