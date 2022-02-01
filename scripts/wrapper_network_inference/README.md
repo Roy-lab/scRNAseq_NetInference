@@ -4,7 +4,7 @@ Checklist
 * [X] SCENIC
 * [ ] PIDC
 * [ ] MERLIN
-* [ ] Scribe
+* [X] Scribe
 * [ ] kNN-DREMI
 * [ ] SILGGM
 * [X] Inferelator
@@ -132,3 +132,6 @@ Inputs:
 5. dataset:
     dataset name 
 
+*Notes*:
+
+We did stability selection for LEAP 
