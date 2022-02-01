@@ -6,7 +6,7 @@ Checklist
 * [ ] MERLIN
 * [X] Scribe
 * [ ] kNN-DREMI
-* [ ] SILGGM
+* [X] SILGGM
 * [X] Inferelator
 * [X] LEAP
 * [ ] SCODE
@@ -159,4 +159,28 @@ A csv file for network
 
 *Notes*:
 We did stability selection for PIDC method.
+
+## SILGGM
+*Sample Usage*:
+Do not create Renv environment if you already have created the environment with the same name.
+```shell
+conda env create -f ./environments/Renv.yaml 
+conda activate Renv
+sh SILGGM.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+gasch_GSE102475_SILGGM \
+gasch_GSE102475_SILGGM_log.txt
+```
+
+*Inputs*:
+1. counts
+    counts matrix: subset.$(idx).csv.gz
+2. pseudotime:
+    ordered_pdata.csv
+3. fname 
+    could be the dataset name
+*Outputs*:
+
+*Notes*:
+We did stability selection for SILGGM
 
