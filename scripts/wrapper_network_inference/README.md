@@ -83,6 +83,8 @@ We only have single run for inferelator (without stability selection) due to com
 ## LEAP
 *Sample Usage*:
 ```shell
+conda env create -f ./environments/Renv.yaml
+conda activate Renv
 sh LEAP.sh \
 ../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
 ../../data/gasch_GSE102475/ordered_pdata.csv \
