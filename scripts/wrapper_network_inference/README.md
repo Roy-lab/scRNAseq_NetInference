@@ -103,3 +103,32 @@ gasch_GSE102475_LEAP \
 
 *Notes*:
 We did stability selection for LEAP 
+
+## Scribe
+*Sample Usage*:
+```shell
+conda env create -f ./environments/Renv.yaml
+conda activate Renv
+sh ./Scribe.sh \
+../../data/gasch_GSE102475/ordered_CDS.rds \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../ref/regulators/yeast_regulators.txt \
+gasch_GSE102475_Scribe.txt \
+gasch_GSE102475
+```
+*Input*:
+Inputs:
+1. CDS:
+    CDS files The final CellDataSet object, which also includes the dimensionally reduced
+    data, in serialized `.rds` format. Can be loaded into R with `readRDS`.
+2. expr_mat:
+    counts matrix: subset.$(idx).csv.gz
+2. pseudotime:
+    ordered_pdata.csv
+3. regulators: 
+    could be the dataset name
+4. fout:
+    file name of output file (should be .txt file)
+5. dataset:
+    dataset name 
+
