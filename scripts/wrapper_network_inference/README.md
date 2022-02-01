@@ -5,7 +5,7 @@ Checklist
 * [X] PIDC
 * [ ] MERLIN
 * [X] Scribe
-* [ ] kNN-DREMI
+* [X] kNN-DREMI
 * [X] SILGGM
 * [X] Inferelator
 * [X] LEAP
@@ -126,7 +126,7 @@ Inputs:
 2. pseudotime:
     ordered_pdata.csv
 3. regulators: 
-    could be the dataset name
+    a .txt. file that contains regulator names. 
 4. fout:
     file name of output file (should be .txt file)
 5. dataset:
@@ -172,15 +172,68 @@ gasch_GSE102475_SILGGM \
 gasch_GSE102475_SILGGM_log.txt
 ```
 
-*Inputs*:
-1. counts
-    counts matrix: subset.$(idx).csv.gz
-2. pseudotime:
-    ordered_pdata.csv
-3. fname 
-    could be the dataset name
+*Inputs*: 
+1. counts:
+    expression matrix
+2. fname:
+    output file name
+3. log:
+    log file name
 *Outputs*:
 
 *Notes*:
 We did stability selection for SILGGM
+
+
+## knnDREMI
+*Sample Usage*:
+```shell
+sh knnDREMI.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../ref/regulators/yeast_regulators.txt \
+gasch_GSE102475_knnDREMI.txt
+gasch_GSE102475_knnDREMI_log.txt
+```
+
+*Inputs*: 
+1. counts:
+    expression matrix
+2. regulators:
+     a .txt. file that contains regulator names. 
+3. fout:
+    output file
+4. log:
+    log file name
+    
+*Outputs*:
+
+*Notes*:
+We did stability selection for knnDREMI.
+
+
+## SCODE
+*Sample Usage*:
+```shell
+sh SCODE.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../ref/regulators/yeast_regulators.txt \
+gasch_GSE102475_knnDREMI.txt
+gasch_GSE102475_knnDREMI_log.txt
+```
+
+*Inputs*:
+1. exp
+    expression file
+2. pseudo
+    pseudotime file
+3. name
+    output prefix name
+    
+*Outputs*:
+
+*Notes*:
+We did stability selection for SCODE.
+
+
+
 
