@@ -1,0 +1,8 @@
+MacIsaac	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/golds/mac2.txt	1
+YeastractC3	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/golds/yeastract_c3.txt	2
+YeastractT2	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/golds/yeastract_t2.txt	3
+Hu	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/golds/hu.txt	4
+GENIE3	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/inferred/g3.exp.txt	5
+Inferelator	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/inferred/inf.exp.txt	6
+MERLIN	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/inferred/merlin.exp.txt	7
+MERLIN-P	/mnt/dv/wid/projects2/Roy-common/programs/programs/comparetargetsets_allnets_v3/example/inferred/merlinp.exp.txt	8
