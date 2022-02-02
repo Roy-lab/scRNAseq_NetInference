@@ -233,47 +233,44 @@ We did stability selection for SCODE.
 ## MERLIN
 *Sample Usage*:
 ```shell
-sh SCODE.sh \
+sh MERLIN.sh \
 ../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
 ../../data/gasch_GSE102475/ordered_pdata.csv \
 gasch_GSE102475_SCODE
 ```
 
 *Inputs*:
-1. exp
-    expression file
-2. pseudo
-    pseudotime file
-3. name
-    output prefix name
+1. Stability selection iteration
+The number of stability selection
+2. Regulator file
+regulator files
+3. Cluster file
+cluster_assignment=$3
     
 *Outputs*:
 
 *Notes*:
-We did stability selection for SCODE.
+We did stability selection for MERLIN.
 
 
 ## SCENIC
 *Sample Usage*:
 ```shell
-sh SCODE.sh \
+sh SCENIC.sh \
 ../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
-../../data/gasch_GSE102475/ordered_pdata.csv \
-gasch_GSE102475_SCODE
+../../ref/regulators/yeast_regulators.txt \
+gasch_GSE102475_SCENIC
 ```
 
 *Inputs*:
-1. exp
-    expression file
-2. pseudo
-    pseudotime file
-3. name
-    output prefix name
+1. Expression file
+expression matrix
+2. Transcription factor file
+List of transcriptional factors
+3. Outfile
+output file
     
 *Outputs*:
-
-*Notes*:
-We did stability selection for SCODE.
 
 # Format Correction Usage
 
