@@ -3,15 +3,15 @@ Checklist
 * [X] Pearson
 * [X] SCENIC
 * [X] PIDC
-* [ ] MERLIN
+* [X] MERLIN
 * [X] Scribe
 * [X] kNN-DREMI
 * [X] SILGGM
 * [X] Inferelator
 * [X] LEAP
-* [ ] SCODE
+* [X] SCODE
 
-# Usage
+# Network Inference Usage
 ## Pearson
 *Sample Usage*:
 ```shell
@@ -39,9 +39,6 @@ gasch_GSE102475_pearson_log.txt
     
 *Notes*:
 We did stability selection for pearson correlation method, 
-
-
-
 
 
 ## Inferelator
@@ -216,9 +213,30 @@ We did stability selection for knnDREMI.
 ```shell
 sh SCODE.sh \
 ../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
-../../ref/regulators/yeast_regulators.txt \
-gasch_GSE102475_knnDREMI.txt
-gasch_GSE102475_knnDREMI_log.txt
+../../data/gasch_GSE102475/ordered_pdata.csv \
+gasch_GSE102475_SCODE
+```
+
+*Inputs*:
+1. exp
+    expression file
+2. pseudo
+    pseudotime file
+3. name
+    output prefix name
+    
+*Outputs*:
+
+*Notes*:
+We did stability selection for SCODE.
+
+## MERLIN
+*Sample Usage*:
+```shell
+sh SCODE.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../data/gasch_GSE102475/ordered_pdata.csv \
+gasch_GSE102475_SCODE
 ```
 
 *Inputs*:
@@ -235,5 +253,27 @@ gasch_GSE102475_knnDREMI_log.txt
 We did stability selection for SCODE.
 
 
+## SCENIC
+*Sample Usage*:
+```shell
+sh SCODE.sh \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
+../../data/gasch_GSE102475/ordered_pdata.csv \
+gasch_GSE102475_SCODE
+```
 
+*Inputs*:
+1. exp
+    expression file
+2. pseudo
+    pseudotime file
+3. name
+    output prefix name
+    
+*Outputs*:
+
+*Notes*:
+We did stability selection for SCODE.
+
+# Format Correction Usage
 
