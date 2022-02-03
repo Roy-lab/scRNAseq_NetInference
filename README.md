@@ -7,9 +7,8 @@ We benchmarked 11 different network inference algorithms on 7 scRNA-seq datasets
 ## Obtaining pseudo time
 
 ## Running algorithms 
-
-# Network Inference Usage
-## Pearson
+Scripts should be run under 
+### Pearson
 *Sample Usage*:
 ```shell
 sh ./pearson.sh \
@@ -38,7 +37,7 @@ gasch_GSE102475_pearson_log.txt
 We did stability selection for pearson correlation method, 
 
 
-## Inferelator
+### Inferelator
 *Sample Usage*:
 ```shell
 sh ./inferelator.sh \
@@ -74,7 +73,7 @@ The .tsv file of network will in at $dirname/final/network.tsv
 We only have single run for inferelator (without stability selection) due to computing resource limit.
 
 
-## LEAP
+### LEAP
 *Sample Usage*:
 ```shell
 conda env create -f ./environments/Renv.yaml
@@ -98,7 +97,7 @@ gasch_GSE102475_LEAP \
 *Notes*:
 We did stability selection for LEAP 
 
-## Scribe
+### Scribe
 *Sample Usage*:
 ```shell
 conda env create -f ./environments/Renv.yaml
@@ -132,7 +131,7 @@ Inputs:
 2. To enable Scribe to run on large sets of regulators, we split the regulator list into smaller sets
 
 
-## PIDC
+### PIDC
 *Sample Usage*:
 ```shell
 sh ./PIDC.sh \
@@ -154,7 +153,7 @@ A csv file for network
 *Notes*:
 We did stability selection for PIDC method.
 
-## SILGGM
+### SILGGM
 *Sample Usage*:
 Do not create Renv environment if you already have created the environment with the same name.
 ```shell
@@ -179,7 +178,7 @@ gasch_GSE102475_SILGGM_log.txt
 We did stability selection for SILGGM
 
 
-## knnDREMI
+### knnDREMI
 *Sample Usage*:
 ```shell
 sh knnDREMI.sh \
@@ -205,7 +204,7 @@ gasch_GSE102475_knnDREMI_log.txt
 We did stability selection for knnDREMI.
 
 
-## SCODE
+### SCODE
 *Sample Usage*:
 ```shell
 sh SCODE.sh \
@@ -227,7 +226,7 @@ gasch_GSE102475_SCODE
 *Notes*:
 We did stability selection for SCODE.
 
-## MERLIN
+### MERLIN
 *Sample Usage*:
 ```shell
 sh MERLIN.sh \
@@ -250,7 +249,7 @@ cluster_assignment=$3
 We did stability selection for MERLIN.
 
 
-## SCENIC
+### SCENIC
 *Sample Usage*:
 ```shell
 sh SCENIC.sh \
@@ -274,7 +273,92 @@ output file
 
 
 ## Computing F-score 
+# F score
+This folder contains all scripts to compute f-score.
+## Usage
+*Sample Usage*:
+```shell
+python3 ./fscore.py \
+-k 5000 \
+./gasch_GSE102475.txt.gz \
+../../../refs/gold_standard_interactions/yeast/yeast_KDUnion.txt \
+../../../results/TF_target_lists/gasch_GSE102475.TFs.txt \
+../../../results/TF_target_lists/gasch_GSE102475.targets.txt
+```
+*Inputs*:
+1. -k :
+    We only used top k edges to compute f score, define k by this parameter
+2. inferred :
+    The inferred network
+3. gold :
+    The gold standard network
+4. --inferred-TFs :
+    Transcriptional factor list, used to filter the networks
+5. --inferred-targets :
+    regulated target list, used to filter the networks
 
 ## Computing AUPR
+# AUPR
+This folder contains all helper scripts and a wrapper script to compute AUPR
+We also give a sample input network gasch_GSE102475.txt.gz (network inferred from gasch dataset by LEAP) for your convenient to try this code.
+
+## Usage
+*Sample Usage*:
+```shell
+sh ./aupr_wrapper.sh \
+../../../refs/gold_standard_interactions/yeast/yeast_KDUnion.txt \
+./gasch_GSE102475.txt.gz \
+./gasch_GSE102475_AUPR \
+prefix \
+../../../results/TF_target_lists/gasch_GSE102475.TFs.txt \
+../../../results/TF_target_lists/gasch_GSE102475.targets.txt
+```
+
+*Inputs*:
+1. gold_standard
+    Gold standard (ChIP, Perturb or ChIP+Perturb) for the corresponding cell type (species)
+2. predicted_net
+    The inferred gene regulatory network
+3. outdir
+    Output directory
+4. prefix
+    File prefix
+5. inferred_TFs
+    Transcriptional factor list, used to filter the networks
+6. inferred_targets
+    regulated target list, used to filter the networks
 
 ## Obtaining predictable TF and targets
+# Predictable Transcriptional Factors
+This folder contains all scripts to get the predictable transcriptional factors.
+
+## Usage
+*Sample Usage*:
+```shell
+sh ./predictable_TFs.sh \
+../../../refs/gold_standard_interactions/yeast/yeast_KDUnion.txt \
+./gasch_GSE102475.txt.gz \
+./gasch_GSE102475_predictable_TFs \
+../../../results/TF_target_lists/gasch_GSE102475.TFs.txt \
+../../../results/TF_target_lists/gasch_GSE102475.targets.txt \
+5000 \
+LEAP \
+yeast_KDUnion
+```
+
+*Inputs*:
+1. gold_standard
+    Gold standard (ChIP, Perturb or ChIP+Perturb) for the corresponding cell type (species)
+2. predicted_net
+    The inferred gene regulatory network
+3. outdir
+    Output directory
+4. inferred_TFs
+    Transcriptional factor list, used to filter the networks
+5. inferred_targets
+    regulated target list, used to filter the networks
+6. top_k
+    We only used top k edges to compute predictable TFs, define k by this parameter
+7. algorithm
+8. GS_src
+    Gold standard type
