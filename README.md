@@ -7,6 +7,16 @@ We benchmarked 11 different network inference algorithms on 7 scRNA-seq datasets
 # Running different network inference algorithms 
 Below we describe usage scripts with the Gasch yeast dataset also available [here](https://github.com/Roy-lab/scRNAseq_NetInference/tree/master/data/gasch_GSE102475).
 The usage below assumes the scripts are being run under `scripts/wrapper_network_inference/`
+* [Pearson](#pearson)
+* [Inferelator](#inferelator)
+* [LEAP](#leap)
+* [Scribe](#scribe)
+* [PIDC](#pidc)
+* [SILGGM](#silggm)
+* [SCODE](#scode)
+* [knnDREMI](*knndremi)
+* [MERLIN](#merlin)
+* [SCENIC](#scenic)
 
 ### Pearson
 *Sample Usage*:
