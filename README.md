@@ -102,6 +102,7 @@ gasch_GSE102475_LEAP \
     ordered_pdata.csv
 3. fname 
     could be the dataset name
+    
 *Outputs*:
 Compressed .csv file of raw network
 
@@ -261,6 +262,8 @@ The number of stability selection
 regulator files
 3. Cluster file
 cluster_assignment  
+
+
 *Outputs*:
 Compressed output directory, under ${outputdir}/fold0/ there are module assignment file and the inferred network
 
