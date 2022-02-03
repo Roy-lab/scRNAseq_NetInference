@@ -27,6 +27,21 @@ fdata=$4
 output=$5
 
 echo "Format the raw output network to formatted network"
-python3 ./format_output.py $input_network $algorithm $regulators $fdata \
+python3 ./format_output/format_stability.py $input_network $algorithm $regulators $fdata \
 -o $output
 
+mean=$output/mean.txt
+rank=$output/rank.txt
+borda1=$output/borda1.txt
+borda2=$output/borda2.txt
+SS_IDXS=list(range(100))
+subsets=[subset.${idx}.csv.gz for idx in SS_IDXS]
+
+
+python3 ./format_output/merge_stability.py \
+$regulators \
+$mean \
+$rank \
+$borda1 \
+$borda2 \
+$subsets
