@@ -34,9 +34,11 @@ mean=$output/mean.txt
 rank=$output/rank.txt
 borda1=$output/borda1.txt
 borda2=$output/borda2.txt
-SS_IDXS=list(range(100))
-subsets=[subset.${idx}.csv.gz for idx in SS_IDXS]
-
+subsets="subset.0.csv.gz "
+for i in {1..10};
+do
+    subsets=${subsets}"subset."${subsets}".csv.gz"
+done
 
 python3 ./format_output/merge_stability.py \
 $regulators \
