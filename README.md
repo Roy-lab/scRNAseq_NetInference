@@ -7,7 +7,7 @@ We benchmarked 11 different network inference algorithms on 7 scRNA-seq datasets
 ## Obtaining pseudo time
 
 ## Running algorithms 
-Scripts should be run under 
+Scripts should be run under `scripts/wrapper_network_inference/`
 ### Pearson
 *Sample Usage*:
 ```shell
@@ -273,9 +273,8 @@ output file
 
 
 ## Computing F-score 
-# F score
-This folder contains all scripts to compute f-score.
-## Usage
+`wrapper_metrics/fscore/` contains all scripts to compute f-score.
+### Usage
 *Sample Usage*:
 ```shell
 python3 ./fscore.py \
@@ -298,11 +297,10 @@ python3 ./fscore.py \
     regulated target list, used to filter the networks
 
 ## Computing AUPR
-# AUPR
-This folder contains all helper scripts and a wrapper script to compute AUPR
+`wrapper_metrics/AUPR/` contains all helper scripts and a wrapper script to compute AUPR
 We also give a sample input network gasch_GSE102475.txt.gz (network inferred from gasch dataset by LEAP) for your convenient to try this code.
 
-## Usage
+### Usage
 *Sample Usage*:
 ```shell
 sh ./aupr_wrapper.sh \
@@ -330,9 +328,9 @@ prefix \
 
 ## Obtaining predictable TF and targets
 # Predictable Transcriptional Factors
-This folder contains all scripts to get the predictable transcriptional factors.
+`wrapper_metrics/predictable_TFs/` contains all scripts to get the predictable transcriptional factors.
 
-## Usage
+### Usage
 *Sample Usage*:
 ```shell
 sh ./predictable_TFs.sh \
