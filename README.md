@@ -268,9 +268,8 @@ output file
     
 *Outputs*:
 
-
-## Obtaining consensus networks
-
+# Evaluting the inferred networks
+We used F-score and AUPR as global metrics for assessing network structure and number of predictable TFs as local metrics for assessing network structure.
 
 ## Computing F-score 
 `wrapper_metrics/fscore/` contains all scripts to compute f-score.
@@ -326,8 +325,8 @@ prefix \
 6. inferred_targets
     regulated target list, used to filter the networks
 
-## Obtaining predictable TF and targets
-# Predictable Transcriptional Factors
+
+## Predictable Transcriptional Factors
 `wrapper_metrics/predictable_TFs/` contains all scripts to get the predictable transcriptional factors.
 
 ### Usage
