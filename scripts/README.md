@@ -2,16 +2,14 @@
 ### Network inference 
 - `scripts/wrapper_network_inference/` 
 The wrapper shell scripts that can be used to run the algorithms on pre-processed dataset, and provide format corrected networks as output
-- `scripts/run_algorithms/`
+- `scripts/wrapper_network_inference/run_algorithms/`
 The python or R scripts to run specific algorithms. These scripts are called from the shell scripts in `wrappers/`
-- `scripts/format_output/`
+- `scripts/wrapper_network_inference/format_output/`
 Scripts to align the output format of each algorithms. These scripts are called from the shell scripts in `wrappers/`
 
 ### Metrics computing
 - `scripts/wrapper_metrics/`
 The wrapper script to generate scores for each metric, input is formated networks and output is score dataframes in text files.
-- `scripts/computing_metrics/`
-The scripts to compute metrics 
 
 
 https://drive.google.com/drive/folders/1S3EKQ2pCUcXOtezoIPx99aFs2oibqOup?usp=sharing
