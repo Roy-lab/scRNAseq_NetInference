@@ -290,7 +290,7 @@ Compressed .txt file containing inferred network.
 
 # Generating consensus networks
 The usage below assumes the scripts are being run under `scripts/wrapper_network_inference/`
-## `scripts/wrapper_network_inference/format_output.sh`
+`scripts/wrapper_network_inference/format_output.sh`
 ### Usage 
 *Sample Usage*:
 ```shell
