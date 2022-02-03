@@ -282,7 +282,7 @@ output file
 We used F-score and AUPR as global metrics for assessing network structure and number of predictable TFs as local metrics for assessing network structure.
 * [F-score](#computing-f-score)
 * [AUPR](#aupr)
-* [Predictable Transcription Factors](#predictable-transcription-factors)
+* [Predictable Transcription Factors](#predictable-transcriptional-factors)
 
 ## Computing F-score 
 `wrapper_metrics/fscore/` contains all scripts to compute f-score.
