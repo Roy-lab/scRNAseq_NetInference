@@ -103,6 +103,7 @@ gasch_GSE102475_LEAP \
 3. fname 
     could be the dataset name
 *Outputs*:
+Compressed .csv file of raw network
 
 *Notes*:
 We did stability selection for LEAP 
@@ -134,6 +135,9 @@ Inputs:
     file name of output file (should be .txt file)
 5. dataset:
     dataset name 
+    
+*Outputs*:
+Compressed .txt file of raw network
 
 *Notes*:
 
@@ -182,7 +186,9 @@ gasch_GSE102475_SILGGM_log.txt
     output file name
 3. log:
     log file name
+
 *Outputs*:
+Compressed .csv file of raw network
 
 *Notes*:
 We did stability selection for SILGGM
@@ -209,6 +215,7 @@ gasch_GSE102475_knnDREMI_log.txt
     log file name
     
 *Outputs*:
+Compressed .txt file of raw network
 
 *Notes*:
 We did stability selection for knnDREMI.
@@ -232,6 +239,8 @@ gasch_GSE102475_SCODE
     output prefix name
     
 *Outputs*:
+Compressed out folder containing A.txt, B.txt, RSS.txt, W.txt. See https://github.com/hmatsu1226/SCODE for details of these outputs.
+
 
 *Notes*:
 We did stability selection for SCODE.
@@ -251,9 +260,9 @@ The number of stability selection
 2. Regulator file
 regulator files
 3. Cluster file
-cluster_assignment=$3
-    
+cluster_assignment  
 *Outputs*:
+Compressed output directory, under ${outputdir}/fold0/ there are module assignment file and the inferred network
 
 *Notes*:
 We did stability selection for MERLIN.
@@ -277,6 +286,33 @@ List of transcriptional factors
 output file
     
 *Outputs*:
+Compressed .txt file containing inferred network.
+
+# Generating consensus networks
+The usage below assumes the scripts are being run under `scripts/wrapper_network_inference/`
+## `scripts/wrapper_network_inference/format_output.sh`
+### Usage 
+*Sample Usage*:
+```shell
+sh ./format_output.sh \
+./gasch_GSE102475.txt.gz \
+LEAP \
+../../ref/regulators/yeast_regulators.txt \
+../../data/gasch_GSE102475/feature_data.gene_filtered.txt \
+format_network_gasch_LEAP.gz
+```
+*Inputs*:
+1. input_network 
+    Input raw network file
+2. algorithm
+3. regulators
+    List of known regulators
+4. fdata
+    List of genes in the original expression matrix input. Use the fdata table we provide to Monocle. (Required when reformatting SILGGM output, as the SILGGM output matrix removes gene name labels)
+5. output
+    Output file - network reformatted to three columns. If filename ends with .gz, will be compressed.
+    
+
 
 # Evaluating the inferred networks
 We used F-score and AUPR as global metrics for assessing network structure and number of predictable TFs as local metrics for assessing network structure.
