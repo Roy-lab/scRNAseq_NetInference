@@ -12,7 +12,7 @@ The usage below assumes the scripts are being run under `scripts/wrapper_network
 *Sample Usage*:
 ```shell
 sh ./pearson.sh \
-../../data/gasch_GSE102475/normalized/gasch_GSE102475_depthnorm_seqdepthfilter_t.txt \
+../../data/gasch_GSE102475/normalized/subsets/subset.0.csv.gz \
 gasch_GSE102475 \
 gasch_GSE102475_pearson_results \
 gasch_GSE102475_pearson_log.txt
