@@ -10,6 +10,9 @@ Given: a tab separated scRNA-Seq counts file with genes on the rows, cells on co
 4. now run batch regen script which will regenerate the regulators' data that was filtered out
 5. using this regenerated data set, run depth normalization and transformation.
 6. generate subsamples (optional) using 100 partitions and a partition size of (num_samples / 2)
+   Usage: 
+   ./makePartitions inputdata partitions outputdir partitionsize partitiontype[rand|exclusive] orientation[normal|transpose]
+   ./makePartitions example_in/expression.txt 100 example_out/subsamples/ 100 rand normal
 
 
 Scripts referenced above
@@ -18,5 +21,5 @@ Scripts referenced above
 3. INTERSECT GENES:             intersect_genes.py
 4. UNION GENES:                 union_genes.py
 5. BATCH REGEN:                 batchRegenDataset.sh
-6. DEPTH NORM:					dodepthnorm.m
+6. DEPTH NORM:                  dodepthnorm.m
 7. SUBSAMPLING:                 makePartitions
