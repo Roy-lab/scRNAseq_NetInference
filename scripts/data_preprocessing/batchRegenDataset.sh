@@ -1,12 +1,13 @@
-DIR=/mnt/dv/wid/projects2/Roy-regnet-inference/singlecell/sahalab/data_SR/filtered
 
-OUTDIR=/mnt/dv/wid/projects2/Roy-regnet-inference/singlecell/sahalab/data_SR/filtered
+
+DIR=../indir
+
+OUTDIR=../outdir
 
 TOOL=/mnt/dv/wid/projects2/Roy-common/programs/programs/selmerge/selMerge
-##TOOL=~/programs/scripts/filtermiss/filterGenes_SelCols_zeroismiss
-GENESET=/mnt/dv/wid/projects2/Roy-regnet-inference/singlecell/sahalab/data_SR/gene_sets/genes_intersect.txt
+GENESET=genes_intersect.txt
 
-for FNAME in  anemone daisy lilac lotus magnolia marigold orchid tulip zinnia
+for FNAME in  gasch shaleka
 
 do
 	INFILE=$DIR/${FNAME}_zeroismiss_50miss.geneexp

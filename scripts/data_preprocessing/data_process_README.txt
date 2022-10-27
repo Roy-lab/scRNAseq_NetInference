@@ -31,3 +31,16 @@ Scripts referenced above
 4. BATCH REGEN:                 batchRegenDataset.sh
 5. DEPTH NORM:                  dodepthnorm.m
 6. SUBSAMPLING:                 makePartitions
+
+
+Use process_data.sh script to execute the above:
+arguments:
+1. input file (tab separated, genes on the rows samples on cols)
+2. cell filter cutoff (integer)
+3 . outfile prefix
+4. output directory
+5. number of reads each cell must have at least
+6. normalization denominator for counts
+7. gold standard intersection geneset used for filtering
+
+bash process_data.sh gasch_GSE102475_expression.txt 50 gasch_GSE102475 outdir 2000 10000 yeast_KDUnion.txt
