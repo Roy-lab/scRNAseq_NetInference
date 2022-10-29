@@ -54,28 +54,28 @@ union\_genes.py [input\_geneset1\_file] [input\_geneset2\_file] [output\_union\_
 Each of the input and output files consists of a single column which contains the corresponding gene names.
 
 ### Step 4: Regenerate Data
-We extract the subset of the expression data corresponding to the union geneset.
-Command: bash batchRegenDataset.sh
-However, please modify the values of the following variables in "batchRegenDataset.sh" according to your need. 
-GENESET = The union geneset file containing the gene names on a single column.
-INFILE = Input expression file.
+We extract the subset of the expression data corresponding to the union geneset.  
+Command: bash batchRegenDataset.sh  
+However, please modify the values of the following variables in "batchRegenDataset.sh" according to your need.   
+GENESET = The union geneset file containing the gene names on a single column.  
+INFILE = Input expression file.  
 OUTFILE = Output expression file.
 
 ### Step 5: Depth Normalize
-We perform depth normalization and transformation on the regenerated expression dataset.
-We use read\_filter=2000 (i.e. remove the cells that have less than 2,000 total reads) and normalize\_factor=10000 (i.e. a scaling factor of 10,000 during depth normalization).
-Command: matlab dodepthnorm
+We perform depth normalization and transformation on the regenerated expression dataset.  
+We use read\_filter=2000 (i.e. remove the cells that have less than 2,000 total reads) and normalize\_factor=10000 (i.e. a scaling factor of 10,000 during depth normalization).  
+Command: matlab dodepthnorm  
 Required scripts: {dodepthnorm.m, depthnorm\_seqdepthfilter\_func.m}
 
 ### Optional Step: Subsample
-For some of the datasets, we generate subsamples using 100 partitions and a partition size of (num_samples / 2)
+For some of the datasets, we generate subsamples.
 
 **Usage:** 
 ./makePartitions [inputdata] [partitions] [outputdir] [partitionsize] [partitiontype] [orientation]
 
-* inputdata: Input expression file. Should not have It should be a tab separated file. It must have the gene names. However, it must not have the cell barcodes In other words, the input file should contain the gene names and expression values only.
+* inputdata: Input expression file. It should be a tab-separated file. It must have the gene names. However, it must not have the cell barcodes. In other words, the input file should contain the gene names and expression values only.
 * partitions: Number of partitions/subsamples to make.
-* outputdir: Output directory to store all files (this directory needs to be created before running this program).
+* outputdir: Output directory to store all the output files (this directory needs to be created before running this program).
 * partitionsize: Size of each subsample i.e. the desired number of cells in each subsample.
 * partitiontype: "rand" or "exclusive." The "rand" option will perform random subsampling without replacement and thus will produce subsamples that are potentially overlapping with each other. The "exclusive" option will generate non-overlapping subsamples.
 * orientation: "normal" or "transpose." normal means genes are on rows, samples are on columns. transpose means genes are on columns, samples are on rows. The input and output would have the same orientation.
