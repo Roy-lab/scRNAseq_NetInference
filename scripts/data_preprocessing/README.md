@@ -1,5 +1,5 @@
 # A description of the data preprocessing pipeline
-In this README, we describe the pipeline used for preprocessing the single cell RNA-Seq datasets.
+In this README, we describe the pipeline used for preprocessing the single cell RNA-seq datasets.
 The pipeline is implemented in the script "process\_data.sh."
 
 ## Inputs
@@ -43,14 +43,14 @@ All the regulators on this list might not be present in the given expression dat
 Hence, we intersect this list with our full geneset to find the regulators that are present in the given expression data.
 Next, we take the union of the selected regulators and our filtered geneset (hereafter, the "union geneset").
 
-For the intersection operation, we use the "intersect\_genes.py" script.
-Usage:
-intersect\_genes.py [input\_geneset1\_file] [input\_geneset2\_file] [output\_intersection\_geneset\_file]
+For the intersection operation, we use the "intersect\_genes.py" script.  
+Usage:  
+intersect\_genes.py [input\_geneset1\_file] [input\_geneset2\_file] [output\_intersection\_geneset\_file]  
 Each of the input and output files consists of a single column which contains the corresponding gene names.   
 
-For the union operation, we use the "union\_genes.py" script.
-Usage:
-union\_genes.py [input\_geneset1\_file] [input\_geneset2\_file] [output\_union\_geneset\_file]
+For the union operation, we use the "union\_genes.py" script.  
+Usage:  
+union\_genes.py [input\_geneset1\_file] [input\_geneset2\_file] [output\_union\_geneset\_file]  
 Each of the input and output files consists of a single column which contains the corresponding gene names.
 
 ### Step 4: Regenerate Data
