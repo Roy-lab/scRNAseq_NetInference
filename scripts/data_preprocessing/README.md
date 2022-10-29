@@ -1,9 +1,9 @@
 # A description of the data preprocessing pipeline
 In this README, we describe the pipeline used for preprocessing the single cell RNA-Seq datasets.
-The pipeline was executed with the script "process_data.sh."
+The pipeline was executed with the script "process\_data.sh."
 
 ## Inputs
-The "process_data.sh" script requires the following input arguments:
+The "process\_data.sh" script requires the following input arguments:
 1. a tab-separated scRNA-seq counts file with genes on the rows and cells on the columns. First column must be gene names. And the (first row, first column) should have the string "Gene" or "GENE" or "ID" or "id" in it. The first row except the first column should have the cell barcodes. The remaining rows and columns should have the expression values.
 2. cell filter cutoff (integer)
 3. outfile prefix
