@@ -1,7 +1,11 @@
 ## Overview of scripts
+### Data preprocessing
+- `scripts/data_preprocessing/`
+The scripts used for preprocessing the expression datasets.
+
 ### Network inference 
 - `scripts/wrapper_network_inference/` 
-The wrapper shell scripts that can be used to run the algorithms on pre-processed dataset, and provide format corrected networks as output
+The wrapper shell scripts that can be used to run the algorithms on a preprocessed dataset, and provide format corrected networks as output
 - `scripts/wrapper_network_inference/run_algorithms/`
 The python or R scripts to run specific algorithms. These scripts are called from the shell scripts in `wrappers/`
 - `scripts/wrapper_network_inference/format_output/`
