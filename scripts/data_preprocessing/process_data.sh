@@ -28,7 +28,7 @@ UNION_TOOL=scripts/union_genes.py
 REGEN_TOOL=selMerge
 DEPTH_NORM_TOOL=depthnorm_seqdepthfilter.py
 TRANSPOSE_TOOL=transpose.py
-INTERSECT_TOOL=intersect_dataset.py
+INTERSECT_TOOL=intersect_genes.py
 
 #################################
 # Step 1: Filter Genes
