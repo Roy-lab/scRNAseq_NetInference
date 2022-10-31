@@ -67,6 +67,12 @@ We use read\_filter=2000 (i.e. remove the cells that have less than 2,000 total 
 Command: matlab dodepthnorm  
 Required scripts: {dodepthnorm.m, depthnorm\_seqdepthfilter\_func.m}
 
+## Step 6: Intersect genes with gold standard
+Using the resulting depth-normalized expression file, we intersect with the gold standard
+Usage:
+intersect\_genes.py [input\_expression\_file] [gold_geneset_file] [output\_intersection\_geneset\_file]
+The input and output expression file consists of an expression matrix. The input geneset is a column of genes from the gold standard.
+
 ### Optional Step: Subsample
 For some of the datasets, we generate subsamples.
 
