@@ -1,4 +1,4 @@
- description of the data preprocessing pipeline
+Description of the data preprocessing pipeline
 In this README, we describe the pipeline used for preprocessing the single cell RNA-seq datasets.
 The pipeline is implemented in the script "process\_data.sh."
 
